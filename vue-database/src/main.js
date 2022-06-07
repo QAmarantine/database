@@ -5,13 +5,14 @@ import App from './App'
 import router from './router'
 import store from './store'
 import ElementUI from 'element-ui'
+import mavonEditor from 'mavon-editor'
 import 'element-ui/lib/theme-chalk/index.css'
 
 var axios = require('axios')
-axios.defaults.baseURL = 'http://localhost:8443/api'
+axios.defaults.baseURL = 'http://localhost:8080/api'
 Vue.prototype.$axios = axios
 Vue.config.productionTip = false
-
+Vue.use(mavonEditor)
 Vue.use(ElementUI)
 
 router.beforeEach((to, from, next) => {

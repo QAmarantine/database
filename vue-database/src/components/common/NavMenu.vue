@@ -12,7 +12,7 @@
       </el-menu-item>
       <a href="#nowhere" style="color: #222;float: right;padding: 20px;">更多功能</a>
       <i class="el-icon-menu" style="float:right;font-size: 45px;color: #222;padding-top: 8px"></i>
-      <span style="position: absolute;padding-top: 20px;right: 43%;font-size: 20px;font-weight: bold">数据库</span>
+      <span style="position: absolute;padding-top: 20px;right: 43%;font-size: 20px;font-weight: bold">论文库</span>
     </el-menu>
 </template>
 
@@ -23,7 +23,8 @@ export default {
     return {
       navList: [
         {name: '/index', navItem: '首页'},
-        {name: '/essay', navItem: '论文库'},
+        {name: '/paperindex', navItem: '论文库'},
+        {name: '/papereditor', navItem: '论文管理'},
         {name: '/admin', navItem: '个人中心'}
       ]
     }

@@ -18,7 +18,7 @@ export default {
   data () {
     return {
       keywords: '',
-      essays: [],
+      papers: [],
       cardLoading: []
     }
   },

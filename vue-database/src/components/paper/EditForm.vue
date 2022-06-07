@@ -66,7 +66,7 @@ export default {
     },
     onSubmit () {
       this.$axios
-        .post('/essays', {
+        .post('/papers', {
           id: this.form.id,
           title: this.form.title,
           author: this.form.author,

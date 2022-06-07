@@ -5,26 +5,25 @@
       <SideMenu @indexSelect="listByCategory" ref="sideMenu"></SideMenu>
     </el-aside>
     <el-main>
-      <essays class="essays-area" ref="essaysArea"></essays>
+      <papers class="papers-area" ref="papersArea"></papers>
     </el-main>
   </el-container>
 </template>
 
 <script>
 import SideMenu from './SideMenu'
-import Essays from './Essays'
-
+import Papers from './Papers'
 export default {
-  name: 'AppEssay',
-  components: {Essays, SideMenu},
+  name: 'PaperIndex',
+  components: {Papers, SideMenu},
   methods: {
     listByCategory () {
       var _this = this
       var cid = this.$refs.sideMenu.cid
-      var url = 'categories/' + cid + '/essays'
+      var url = 'categories/' + cid + '/papers'
       this.$axios.get(url).then(resp => {
         if (resp && resp.status === 200) {
-          _this.$refs.essaysArea.essays = resp.data
+          _this.$refs.papersArea.papers = resp.data
         }
       })
     }
@@ -33,7 +32,7 @@ export default {
 </script>
 
 <style scoped>
-  .essays-area {
+  .papers-area {
     width: 990px;
     margin-left: auto;
     margin-right: auto;
